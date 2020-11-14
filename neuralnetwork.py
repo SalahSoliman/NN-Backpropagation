@@ -7,6 +7,7 @@ class NeuralNetwork:
         self.W = []
         self.layers = layers
         self.alpha = alpha
+        print("[INFO] Length of layers: {}".format(len(layers)))
         for i in np.arange(0, len(layers)-2):
             w = np.random.randn(layers[i]+1, layers[i+1]+1)
             self.W.append(w/ np.sqrt(layers[i]))
